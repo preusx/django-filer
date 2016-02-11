@@ -9,7 +9,8 @@
     window.dismissRelatedImageLookupPopup = function (win, chosenId, chosenThumbnailUrl, chosenDescriptionTxt) {
         var name = window.windowname_to_id(win.name);
         var nameElement = $('#' + name);
-        var id = nameElement.data('id');
+        // var id = nameElement.data('id');
+        var id = nameElement.attr('id').replace('_lookup', '');
         var img = $('#' + id + '_thumbnail_img');
         var txt = $('#' + id + '_description_txt');
         var clear = $('#' + id + '_clear');
